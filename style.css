@@ -1,0 +1,245 @@
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #CDB4DB, #0D0D0D, #1A1A1A, #B30000);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* BACKGROUND ANIMATION LAYER */
+#bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  z-index: -2;
+}
+
+a{
+   text-decoration: none;
+}
+
+/* NAVBAR */
+.custom-navbar {
+   background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 15px; 
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+.nav-link {
+  color: #ccc !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ff1e1e !important;
+}
+
+/* BUTTON RIGHT */
+.talk-btn {
+  background: linear-gradient(135deg, #ff1e1e, #b30000);
+  color: white;
+  border-radius: 25px;
+  padding: 8px 18px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* TEXT hello i'm */
+.hello {
+  color: #bbb;
+}
+
+.name {
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  margin-top: -60px;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.7),
+    0 0 20px rgba(255, 0, 0, 0.6);
+letter-spacing: 2px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.desc {
+  color: #ddd;
+}
+
+/* BUTTONS */
+.primary-btn {
+  background: linear-gradient(135deg, #ff1e1e, #b30000);
+  color: white;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #eee;
+  border-radius: 25px;
+  padding: 10px 25px;
+}
+	
+/* depth effect */
+#bg-animation canvas {
+  filter: blur(1px);
+  opacity: 0.8;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  width: 100%;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  margin: auto;
+  overflow: hidden;
+}
+.fixed-heading {
+  position: sticky;
+  top: 120px; /* adjust based on navbar height */
+  height: fit-content;
+}
+
+/* Section height for scroll */
+.tools-section {
+  min-height: 30vh; /* IMPORTANT */
+}
+.scroll-text h2 {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.scroll-text h2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Thought-card{
+	    font-size: xxx-large;
+    padding: 70px 30px 5px 5px;
+}
+
+.custom-card{
+   width: 100%;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  margin: auto;
+  overflow: hidden;
+	color:white;
+    /* Gradient shadow glow */
+    box-shadow:
+    0 0 20px rgba(255, 94, 0, 0.5),
+    0 0 40px rgba(255, 0, 85, 0.3);
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.custom-card:hover{
+    transform: translateY(-10px);
+ }
+
+/* for very small screen */
+@media(min-width:412px)
+{
+	
+.hello {
+ margin-top:20px;
+}
+
+.name {
+  font-size: 90px;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 12px;
+}	
+.DollImage{
+display:none;
+}
+	
+
+.profile-card {
+  width: auto;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin: 0px;
+  overflow: hidden;
+}
+	.fixed-heading {
+  position:inherit;
+  top: 1px; /* adjust based on navbar height */
+	}
+	
+} /* end of media querry min width-576px */
+
+
+@media(min-width:1000px)
+{
+	.name {
+  font-size: 100px;
+  font-weight: 700;
+}
+.desc {
+  font-size: 18px;
+	}
+.DollImage{
+display:inherit;
+}
+	
+	.fixed-heading {
+   position: sticky;
+  top: 120px; /* adjust based on navbar height */
+  height: fit-content;
+	}
+}
