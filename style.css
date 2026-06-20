@@ -188,7 +188,7 @@ letter-spacing: 2px;
  }
 
 /* for very small screen */
-@media(min-width:412px)
+@media(min-width:375px)
 {
 	
 .hello {
@@ -196,13 +196,20 @@ letter-spacing: 2px;
 }
 
 .name {
-  font-size: 90px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 300;
 }
 
 .desc {
-  font-size: 12px;
+  font-size: 10px;
 }	
+	
+.signature {
+ font-size: 20px;
+ margin-top: -20px;
+margin-bottom: 10px;
+	}
+	
 .DollImage{
 display:none;
 }
