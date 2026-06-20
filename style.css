@@ -188,7 +188,7 @@ letter-spacing: 2px;
  }
 
 /* for very small screen */
-@media(min-width:375px)
+@media(min-width:380px)
 {
 	
 .hello {
