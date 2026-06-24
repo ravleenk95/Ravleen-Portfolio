@@ -229,7 +229,10 @@ display:none;
 	}
 	
 } /* end of media querry min width-576px */
-
+mark {
+  background-color: black;
+  color: red;
+}
 
 @media(min-width:1000px)
 {
